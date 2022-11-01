@@ -1,9 +1,15 @@
 import React from 'react'
+import './Home.css'
+import Header from '../Header/Header'
 
 const Home = () => {
     return (
-        <div>
-            <h1>Speedy Spice</h1>
+        <div className='home'>
+          <div className='home-header'>
+            <Header />
+          </div>
+          <div className='home-main'>
+          </div>
         </div>
     )
 }
