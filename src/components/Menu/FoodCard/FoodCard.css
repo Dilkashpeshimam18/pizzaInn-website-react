@@ -1,0 +1,51 @@
+.foodCard {
+  width: 350px;
+  height: 435px;
+  margin: 15px;
+  border-radius: 10px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  cursor: pointer;
+}
+.foodCard:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.card__img {
+  width: 350px;
+  height: 225px;
+}
+
+.foodCard__title {
+  font-weight: bold;
+}
+.foodCard__desc {
+  height: 100px;
+  font-size: 14px;
+  padding-top: 7px;
+}
+.foodCard__body {
+  padding: 12px;
+}
+.card__button {
+  height: 45px;
+  width: 300px;
+  background-color: #ffca40;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+}
+.card__button:hover {
+  background-color: white;
+  border: 1px solid #ffca40;
+  color: #ffca40;
+}
+.foorCart__button {
+  padding: 3px;
+  margin-left: 12px;
+}
+.foodCard__price {
+  font-weight: 500;
+  padding-top: 8px;
+}
