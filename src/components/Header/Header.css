@@ -16,6 +16,10 @@
     cursor: pointer;
     margin-right: 10px;
     padding: 5px;
+    font-size: 13px;
+}
+.navLink:hover{
+    color: #ffca40;
 }
 .navLink__container{
     padding: 5px;
