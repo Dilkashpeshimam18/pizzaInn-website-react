@@ -1,44 +1,46 @@
-.header{
-    display: flex;
-    justify-content: space-between;
+.header {
+  display: flex;
+  justify-content: space-between;
 }
-.header__left{
-    margin-left: 100px;
-    margin-top: 25px;
+.header__left {
+  margin-left: 100px;
+  margin-top: 25px;
 }
-.header__right{
-    display: flex;
-    margin-right: 150px;
-    margin-top: 20px;
-
+.header__right {
+  display: flex;
+  margin-right: 150px;
+  margin-top: 20px;
 }
-.navLink{
-    cursor: pointer;
-    margin-right: 10px;
-    padding: 5px;
-    font-size: 13px;
+.navLink {
+  cursor: pointer;
+  margin-right: 10px;
+  padding: 5px;
+  font-size: 13px;
 }
-.navLink:hover{
-    color: #ffca40;
+.navLink:hover {
+  color: #ffca40;
 }
-.navLink__container{
-    padding: 5px;
-    margin-right: 5px;
+.navLink__container {
+  padding: 5px;
+  margin-right: 5px;
 }
-.navLink__button{
-    height: 40px;
-    width: 100px;
-    background-color: #ffca40;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
+.navLink__button {
+  height: 40px;
+  width: 100px;
+  background-color: #ffca40;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
 }
-.navLink__button:hover{
-    background-color: white;
-    border: 1px solid #ffca40;
-    color: #ffca40;
+.navLink__button:hover {
+  background-color: white;
+  border: 1px solid #ffca40;
+  color: #ffca40;
 }
-.button-cotainer{
-    margin-top: 10px;
+.button-cotainer {
+  margin-top: 10px;
+}
+.overlay {
+  background-color: #ffca40;
 }
