@@ -69,6 +69,7 @@ const Header = () => {
                 overlayClassName="some-custom-overlay-class overlay"
                 isOpen={isPane}
                 title="PIZZA INN."
+                hideHeader={true}
                 width="600px"
 
                 onRequestClose={() => {
@@ -81,18 +82,21 @@ const Header = () => {
                         <h3 className='cart__title'>Your Cart</h3>
                         <p className='cart__remove'>Remove all</p>
                     </div>
-                    {dummyData.map((data) => {
-                        return (
-                            <Cart key={data.id} name={data.name} price={data.price} img={data.image} />
+                    <div className='cart__main'>
+                        {dummyData.map((data) => {
+                            return (
+                                <Cart key={data.id} name={data.name} price={data.price} img={data.image} />
 
-                        )
-                    })}
+                            )
+                        })}
+                    </div>
+
                     <div className='cart__total'>
                         <h3 className='cart__total__title'>Total</h3>
                         <h2>Rs 720.00</h2>
                     </div>
                     <div className='cart__buttons'>
-                        <button className='cart__cancel'>Cancel</button>
+                        <button className='cart__button'>Cancel</button>
                         <button className='cart__button'>Order</button>
 
                     </div>

@@ -1,3 +1,6 @@
+.cart {
+  height: max-content;
+}
 .cart__header {
   display: flex;
   justify-content: space-between;
