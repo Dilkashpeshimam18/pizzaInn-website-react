@@ -43,7 +43,7 @@ export const Data = [
         name: 'Chicken Tikka',
         description: 'Chicken Tikka, Onion, Tomato',
         price: 250,
-        image: 'https://www.savoryandsweetfood.com/wp-content/uploads/2015/02/66D422E5-F453-4DD1-9BD9-066E7EF5CCA3.png'
+        image: 'https://api.pizzahut.io/v1/content/en-in/in-1/images/pizza/chicken-tikka-supreme.830de5a911ca95a30e4ca98e529f1b3a.1.jpg'
     }, {
         id: 8,
         name: 'Double Chicken Sausage',

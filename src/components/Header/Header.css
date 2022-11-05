@@ -16,6 +16,7 @@
   margin-right: 10px;
   padding: 5px;
   font-size: 13px;
+  color: black;
 }
 .navLink:hover {
   color: #ffca40;
@@ -39,7 +40,7 @@
   color: #ffca40;
 }
 .button-cotainer {
-  margin-top: 10px;
+  margin-top: 15px;
 }
 .overlay {
 }
@@ -55,8 +56,8 @@
 .cart__button {
   width: 250px;
   height: 40px;
-  background-color: #ffca40;
-  color: white;
+  background-color: #fccc4c;
+  color: black;
   border: none;
   padding: 5px;
   margin: 5px;
@@ -64,7 +65,7 @@
   margin-right: 13px;
   cursor: pointer;
   border-radius: 10px;
-  font-weight: 600;
+  font-weight: 550;
 }
 .cart__cancel {
   width: 250px;

@@ -3,6 +3,7 @@
   height: 435px;
   margin: 15px;
   border-radius: 10px;
+  background-color: #f9f9f9;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   cursor: pointer;
   transition: transform 0.2s; /* Animation */
@@ -30,7 +31,8 @@
 .card__button {
   height: 45px;
   width: 300px;
-  background-color: #ffca40;
+  background-color: #fccc4c;
+  /* background-color: #ffca40; */
   color: white;
   border: none;
   border-radius: 8px;

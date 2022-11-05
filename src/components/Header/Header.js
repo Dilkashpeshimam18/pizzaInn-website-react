@@ -5,6 +5,7 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import SlidingPane from "react-sliding-pane";
 import "react-sliding-pane/dist/react-sliding-pane.css";
 import Cart from '../Cart/Cart';
+import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 const dummyData = [
     {
         id: 1,
@@ -61,7 +62,9 @@ const Header = () => {
                     0
                 </div>
                 <div className='navLink__container button-cotainer'>
-                    <Link to='/menu' style={{ textDecoration: 'none' }}><button className='navLink__button'>Order Now</button></Link>
+                    <SearchOutlinedIcon style={{ fontSize: '23px' }} />
+
+                    {/* <Link to='/menu' style={{ textDecoration: 'none' }}><button className='navLink__button'>Order Now</button></Link> */}
                 </div>
             </div>
             <SlidingPane
