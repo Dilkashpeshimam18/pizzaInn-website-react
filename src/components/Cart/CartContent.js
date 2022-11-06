@@ -1,20 +1,22 @@
 import React, { useState } from 'react'
 import './CartContent.css'
 import Divider from '@mui/material/Divider';
-import { Link } from 'react-router-dom';
 
 
 const CartContent = ({ name, price, img }) => {
     const [quantity, setQuantity] = useState(1)
+
     const handleAdd = () => {
-        setQuantity(quantity + 1)
+        if (quantity <= 4) {
+            setQuantity(quantity + 1)
+        }
     }
+
     const handleSubtract = () => {
-        if (quantity <= 0) {
-            setQuantity(0)
+        if (quantity <= 1) {
+            setQuantity(1)
         } else {
             setQuantity(quantity - 1)
-
         }
     }
     return (
