@@ -35,8 +35,11 @@ const dummyData = [
 
 const Cart = () => {
     const [isOrder, setIsOrder] = useState(false)
-    const handleOrder = () => {
+    const showOrder = () => {
         setIsOrder(true)
+    }
+    const closeOrder = () => {
+        setIsOrder(false)
     }
     return (
         <div className='cart__container'>
@@ -59,8 +62,8 @@ const Cart = () => {
             </div>
             <div className='cart__buttons'>
                 <button className='cart__button'>Cancel</button>
-                <button onClick={handleOrder} className='cart__button'>Order</button>
-                {isOrder == true && <Order />}
+                <button onClick={showOrder} className='cart__button'>Order</button>
+                {isOrder == true && <Order onClose={closeOrder} />}
 
             </div>
         </div>
