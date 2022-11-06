@@ -9,36 +9,40 @@ import Header from './components/Header/Header';
 import TopHeader from './components/Header/TopHeader';
 import SlidingPane from "react-sliding-pane";
 import "react-sliding-pane/dist/react-sliding-pane.css";
+import CartProvider from './store/CartProvider';
 
 function App() {
   const [isPane, setIsPane] = useState(false)
 
   return (
-    <div className="app">
-      <SlidingPane
-        className="some-custom-class"
-        overlayClassName="some-custom-overlay-class overlay"
-        isOpen={isPane}
-        title="PIZZA INN."
-        hideHeader={true}
-        width="600px"
+    <CartProvider>
+      <div className="app">
+        <SlidingPane
+          className="some-custom-class"
+          overlayClassName="some-custom-overlay-class overlay"
+          isOpen={isPane}
+          title="PIZZA INN."
+          hideHeader={true}
+          width="600px"
 
-        onRequestClose={() => {
-          // triggered on "<" on left top click or on outside click
-          setIsPane(false)
-        }}
-      >
-        <Cart setIsPane={setIsPane} />
-      </SlidingPane>
-      <TopHeader />
-      <Header setIsPane={setIsPane} />
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/menu' element={<Menu />} />
-        <Route path='/contact' element={<Contact />} />
-      </Routes>
+          onRequestClose={() => {
+            // triggered on "<" on left top click or on outside click
+            setIsPane(false)
+          }}
+        >
+          <Cart setIsPane={setIsPane} />
+        </SlidingPane>
+        <TopHeader />
+        <Header setIsPane={setIsPane} />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/menu' element={<Menu />} />
+          <Route path='/contact' element={<Contact />} />
+        </Routes>
 
-    </div>
+      </div>
+    </CartProvider>
+
   );
 }
 

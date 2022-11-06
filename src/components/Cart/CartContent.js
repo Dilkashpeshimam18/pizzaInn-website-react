@@ -21,8 +21,6 @@ const CartContent = ({ name, price, img }) => {
     }
     return (
         <div className='cart'>
-
-
             <div className='cart__body'>
                 <div className='cart__body__sub'>
                     <img className='cart__body__img' src={img} />
