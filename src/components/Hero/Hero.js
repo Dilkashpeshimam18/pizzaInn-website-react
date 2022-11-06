@@ -39,7 +39,7 @@ const Hero = () => {
                     </div>
                 </div>
                 <div className='hero__subContainer2'>
-                    <img src='https://androthemes.com/themes/html/slices/assets/img/prods/3.png' alt='pizza' />
+                    <img className='hero__img' src='https://androthemes.com/themes/html/slices/assets/img/prods/3.png' alt='pizza' />
 
                 </div>
 
