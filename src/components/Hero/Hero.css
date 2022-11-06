@@ -1,0 +1,89 @@
+.hero__Container {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+.hero__subContainer1 {
+  max-width: 50%;
+  padding-right: 150px;
+}
+.hero__Title {
+  font-size: 62px;
+  line-height: 80px;
+  font-family: "Oswald", sans-serif;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+.hero__Title2 {
+  font-size: 23px;
+  line-height: 32px;
+  text-transform: uppercase;
+  padding-bottom: 6px;
+}
+.hero__subTitle {
+  max-width: 500px;
+  color: #848486;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+}
+.hero__iconWrapper {
+  display: flex;
+}
+.icon {
+  padding-top: 3px;
+  width: 40px;
+  height: 40px;
+}
+.hero__iconBody {
+  display: block;
+  margin-top: 0;
+  margin-right: 30px;
+  margin-left: 15px;
+}
+.hero__icon {
+  display: flex;
+}
+.icon__quantity {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  color: #1d2228;
+}
+.icon__name {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  color: #848486;
+}
+.hero__button {
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  position: relative;
+  line-height: 24px;
+  border: 0;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 12px 30px;
+  background-color: #ed4e53;
+  color: white;
+  border: none;
+  box-shadow: 4px 3px 24px rgb(237 78 83 / 50%);
+  transition: 0.3s;
+  text-transform: uppercase;
+  border-radius: 25px;
+  z-index: 1;
+}
+.hero__buttonContainer {
+  padding: 2px;
+  margin-top: 35px;
+}

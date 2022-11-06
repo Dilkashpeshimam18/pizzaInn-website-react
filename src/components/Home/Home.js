@@ -2,6 +2,7 @@ import React from 'react'
 import './Home.css'
 import Header from '../Header/Header'
 import TopHeader from '../Header/TopHeader'
+import Hero from '../Hero/Hero'
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
         <Header />
       </div>
       <div className='home__main'>
+        <Hero />
       </div>
     </div>
   )
