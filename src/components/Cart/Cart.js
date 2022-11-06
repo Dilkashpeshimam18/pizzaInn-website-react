@@ -33,13 +33,16 @@ const dummyData = [
 
 ]
 
-const Cart = () => {
+const Cart = (props) => {
     const [isOrder, setIsOrder] = useState(false)
     const showOrder = () => {
         setIsOrder(true)
     }
     const closeOrder = () => {
         setIsOrder(false)
+    }
+    const closeCart = () => {
+        props.setIsPane(false)
     }
     return (
         <div className='cart__container'>
@@ -61,7 +64,7 @@ const Cart = () => {
                 <h2>Rs 720.00</h2>
             </div>
             <div className='cart__buttons'>
-                <button className='cart__button'>Cancel</button>
+                <button onClick={closeCart} className='cart__button'>Cancel</button>
                 <button onClick={showOrder} className='cart__button'>Order</button>
                 {isOrder == true && <Order onClose={closeOrder} />}
 

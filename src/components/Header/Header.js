@@ -51,7 +51,7 @@ const Header = () => {
                     setIsPane(false)
                 }}
             >
-                <Cart />
+                <Cart setIsPane={setIsPane} />
             </SlidingPane>
 
         </div>
