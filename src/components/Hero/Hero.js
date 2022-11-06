@@ -2,6 +2,7 @@ import React from 'react'
 import './Hero.css'
 import Calories from '../resources/calories.png'
 import Cheese from '../resources/cheese.png'
+import { Link } from 'react-router-dom'
 const Hero = () => {
     return (
         <div className='hero'>
@@ -34,7 +35,7 @@ const Hero = () => {
                         </div>
                     </div>
                     <div className='hero__buttonContainer'>
-                        <button className='hero__button'>ORDER NOW</button>
+                        <Link to='/menu'><button className='hero__button'>ORDER NOW</button></Link>
 
                     </div>
                 </div>

@@ -4,12 +4,7 @@ import TopHeader from '../Header/TopHeader'
 const Contact = () => {
     return (
         <div>
-            <div className='home__top__header'>
-                <TopHeader />
-            </div>
-            <div className='home__header'>
-                <Header />
-            </div>
+
         </div>
     )
 }

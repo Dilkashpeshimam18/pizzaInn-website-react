@@ -1,5 +1,6 @@
 import React from 'react'
 import './TopHeader.css'
+import { Link } from 'react-router-dom'
 const TopHeader = () => {
     return (
         <div className='top__header'>
@@ -7,7 +8,7 @@ const TopHeader = () => {
                 <div className='top__header__inner'>
 
 
-                    <button className='top__header__button'>Order Now</button>
+                    <Link style={{ textDecoration: 'none' }} to='/menu'><button className='top__header__button'>Order Now</button></Link>
 
                 </div>
             </div>
