@@ -13,6 +13,8 @@ const CartProvider = (props) => {
             updatedItems.push(item)
             return updatedItems
         })
+
+
         console.log(items)
     }
     const removeItem = (items) => { }
