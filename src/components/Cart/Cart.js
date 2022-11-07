@@ -36,7 +36,7 @@ const dummyData = [
 
 const Cart = (props) => {
     const [isOrder, setIsOrder] = useState(false)
-    const { items, totalAmount } = useContext(CartContext)
+    const { items, totalAmount, removeAll } = useContext(CartContext)
     const numberOfItem = items.reduce((currNum, item) => {
         return currNum + item.quantity
     }, 0)
@@ -56,7 +56,7 @@ const Cart = (props) => {
         <div className='cart__container'>
             <div className='cart__header'>
                 <h3 className='cart__title'>Your Cart</h3>
-                <p className='cart__remove'>Remove all</p>
+                <p onClick={removeAll} className='cart__remove'>Remove all</p>
             </div>
             <div className='cart__main'>
                 {items.map((data) => {

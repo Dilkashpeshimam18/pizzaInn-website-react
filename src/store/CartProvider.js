@@ -17,13 +17,17 @@ const CartProvider = (props) => {
 
         console.log(items)
     }
+    const removeAll = () => {
+        setItems([])
+    }
     const removeItem = (items) => { }
 
     const cartValue = {
         items: items,
         totalAmount: totalAmount,
         addItem: addItem,
-        removeItem: removeItem
+        removeItem: removeItem,
+        removeAll: removeAll
     }
     return (
         <CartContext.Provider value={cartValue}>{props.children}</CartContext.Provider>
