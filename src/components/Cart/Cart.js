@@ -1,8 +1,9 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import './Cart.css'
 import CartContent from './CartContent'
 import { Link } from 'react-router-dom'
 import Order from '../Order/Order'
+import CartContext from '../../store/cartContext'
 const dummyData = [
     {
         id: 1,
@@ -35,6 +36,7 @@ const dummyData = [
 
 const Cart = (props) => {
     const [isOrder, setIsOrder] = useState(false)
+    const { items } = useContext(CartContext)
     const showOrder = () => {
         setIsOrder(true)
     }
@@ -51,9 +53,9 @@ const Cart = (props) => {
                 <p className='cart__remove'>Remove all</p>
             </div>
             <div className='cart__main'>
-                {dummyData.map((data) => {
+                {items.map((data) => {
                     return (
-                        <CartContent key={data.id} name={data.name} price={data.price} img={data.image} />
+                        <CartContent key={data.id} name={data.name} price={data.price} img={data.img} />
 
                     )
                 })}

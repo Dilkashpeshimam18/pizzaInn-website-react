@@ -1,12 +1,18 @@
-import React, { useState } from 'react'
+import React, { useState, useContext, useEffect } from 'react'
 import './Header.css'
 import { Link } from 'react-router-dom'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
-import Cart from '../Cart/Cart';
+import CartContext from '../../store/cartContext';
 
 const Header = ({ setIsPane }) => {
+    const { items, addItem } = useContext(CartContext)
+    const numberOfItem = items.reduce((currNum, item) => {
+        return currNum + item.quantity
+    }, 0)
+    useEffect(() => {
+        console.log(items)
+    }, [items, addItem])
     return (
         <div className='header'>
             <div className='header__left'>
@@ -28,7 +34,7 @@ const Header = ({ setIsPane }) => {
                 </div>
 
                 <div style={{ marginTop: '15px', cursor: 'pointer' }} className='navLink__container'>
-                    0
+                    {items.length}
                 </div>
                 <div className='navLink__container button-cotainer'>
                     <SearchOutlinedIcon style={{ fontSize: '23px' }} />

@@ -3,11 +3,11 @@ import Header from '../Header/Header'
 import TopHeader from '../Header/TopHeader'
 import FoodItem from './FoodItem/FoodItem'
 
-const Menu = () => {
+const Menu = ({ addFoodItems }) => {
     return (
         <div className='menu'>
             <div className='menu__body'>
-                <FoodItem />
+                <FoodItem addFoodItems={addFoodItems} />
             </div>
         </div>
     )

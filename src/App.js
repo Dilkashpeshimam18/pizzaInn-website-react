@@ -13,6 +13,11 @@ import CartProvider from './store/CartProvider';
 
 function App() {
   const [isPane, setIsPane] = useState(false)
+  const [foodItems, setFoodItems] = useState([])
+  const addFoodItems = (item) => {
+    setFoodItems([...foodItems, item])
+    console.log(foodItems)
+  }
 
   return (
     <CartProvider>
@@ -33,10 +38,10 @@ function App() {
           <Cart setIsPane={setIsPane} />
         </SlidingPane>
         <TopHeader />
-        <Header setIsPane={setIsPane} />
+        <Header foodItems={foodItems} setIsPane={setIsPane} />
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/menu' element={<Menu />} />
+          <Route path='/menu' element={<Menu addFoodItems={addFoodItems} />} />
           <Route path='/contact' element={<Contact />} />
         </Routes>
 
