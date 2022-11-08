@@ -1,10 +1,12 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import './CartContent.css'
 import Divider from '@mui/material/Divider';
+import CartContext from '../../store/cartContext';
 
 
-const CartContent = ({ name, price, img }) => {
+const CartContent = ({ id, name, price, img }) => {
     const [quantity, setQuantity] = useState(1)
+    const { removeItem } = useContext(CartContext)
 
     const handleAdd = () => {
         if (quantity <= 4) {
@@ -43,7 +45,9 @@ const CartContent = ({ name, price, img }) => {
                     </div>
                     <div className='cart__body__total'>
                         <span className='cart__body__totalPrice'>Rs:{price}</span>
-                        <span className='cart__body__totalRemove'>Remove</span>
+                        <span onClick={() => {
+                            removeItem(id)
+                        }} className='cart__body__totalRemove'>Remove</span>
                     </div>
 
                 </div>

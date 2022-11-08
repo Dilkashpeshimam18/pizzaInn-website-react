@@ -59,9 +59,9 @@ const Cart = (props) => {
                 <p onClick={removeAll} className='cart__remove'>Remove all</p>
             </div>
             <div className='cart__main'>
-                {items.map((data) => {
+                {items.map((data, index) => {
                     return (
-                        <CartContent key={data.id} name={data.name} price={data.price} img={data.img} />
+                        <CartContent key={index} id={data.id} name={data.name} price={data.price} img={data.img} />
 
                     )
                 })}

@@ -5,7 +5,6 @@ import CartContext from './cartContext'
 const CartProvider = (props) => {
     const [items, setItems] = useState([])
     const [totalAmount, setTotalAmount] = useState(0)
-    // const { items } = useContext(CartContext)
 
     const addItem = (item) => {
         setItems((prevItem) => {
@@ -20,7 +19,13 @@ const CartProvider = (props) => {
     const removeAll = () => {
         setItems([])
     }
-    const removeItem = (items) => { }
+    const removeItem = (id) => {
+        let filterItem = items.filter((item) => {
+            return item.id != id
+        })
+        setItems(filterItem)
+
+    }
 
     const cartValue = {
         items: items,
