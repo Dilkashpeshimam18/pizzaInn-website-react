@@ -8,12 +8,33 @@ const CartProvider = (props) => {
     const [numberOfItem, setNumberOfItem] = useState(0)
 
     const addItem = (item) => {
+        let existingItemIndex = items.findIndex(ele => ele.id === item.id)
+        let existingItem = items[existingItemIndex]
+        let updatedItem;
+        let updatedItems
+        if (existingItem) {
 
-        setItems((prevItem) => {
-            let updatedItems = [...prevItem]
-            updatedItems.push(item)
-            return updatedItems
-        })
+            updatedItem = {
+                ...existingItem,
+                quantity: existingItem.quantity + item.quantity
+            }
+
+            setItems((prevItem) => {
+                updatedItems = [...prevItem]
+                updatedItems[existingItemIndex] = updatedItem
+                return updatedItems
+            })
+            console.log('updated item')
+
+        } else {
+            setItems((prevItem) => {
+                let updatedItems = [...prevItem]
+                updatedItems.push(item)
+                return updatedItems
+            })
+            console.log('added new item')
+        }
+
 
 
 
