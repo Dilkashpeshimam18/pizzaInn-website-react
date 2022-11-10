@@ -5,7 +5,7 @@ import FoodCard from '../FoodCard/FoodCard'
 import { Data } from '../FoodData/FoodData'
 
 
-const FoodItem = ({ addFoodItems }) => {
+const FoodItem = ({ addFoodItems, itemQuantity, setItemQuantity }) => {
     const [foodData, setFoodData] = useState([])
     useEffect(() => {
         let data = Data
@@ -18,7 +18,7 @@ const FoodItem = ({ addFoodItems }) => {
         <div className='foodItem'>
             {foodData.map((data, index) => {
                 return (
-                    <FoodCard key={index} id={data.id} name={data.name} price={data.price} description={data.description} img={data.image} addFoodItems={addFoodItems} />
+                    <FoodCard itemQuantity={itemQuantity} setItemQuantity={setItemQuantity} key={index} id={data.id} name={data.name} price={data.price} description={data.description} img={data.image} addFoodItems={addFoodItems} quantity={data.quantity} />
                 )
             })}
 

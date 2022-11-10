@@ -1,6 +1,6 @@
 .foodCard {
   width: 350px;
-  height: 435px;
+  height: 500px;
   margin: 15px;
   border-radius: 10px;
   background-color: #f9f9f9;
@@ -52,4 +52,28 @@
 .foodCard__price {
   font-weight: 500;
   padding-top: 8px;
+}
+.cart__body__quantity {
+  display: flex;
+  padding: 10px;
+  margin-bottom: 20px;
+  /* margin-left: 80px; */
+}
+.quantity__add {
+  background-color: #ffca40;
+  height: 25px;
+  width: 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.quantity__subtract {
+  background-color: rgb(224, 224, 224);
+  /* background-color: #ffca40; */
+
+  height: 25px;
+  width: 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-right: 10px;
 }

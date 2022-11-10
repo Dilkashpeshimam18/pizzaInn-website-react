@@ -1,26 +1,12 @@
-import React, { useState, useContext } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import './CartContent.css'
 import Divider from '@mui/material/Divider';
 import CartContext from '../../store/cartContext';
 
 
-const CartContent = ({ id, name, price, img }) => {
-    const [quantity, setQuantity] = useState(1)
+const CartContent = ({ id, name, price, img, incrementQuantity }) => {
     const { removeItem } = useContext(CartContext)
 
-    const handleAdd = () => {
-        if (quantity <= 4) {
-            setQuantity(quantity + 1)
-        }
-    }
-
-    const handleSubtract = () => {
-        if (quantity <= 1) {
-            setQuantity(1)
-        } else {
-            setQuantity(quantity - 1)
-        }
-    }
     return (
         <div className='cart'>
             <div className='cart__body'>
@@ -31,18 +17,7 @@ const CartContent = ({ id, name, price, img }) => {
                         <span>Rs:{price}</span>
 
                     </div>
-                    <div className='cart__body__quantity'>
-                        <div onClick={handleSubtract} className='quantity__subtract'>
-                            <span style={{ marginLeft: '12px' }}>-</span>
-                        </div>
-                        <div className='quantity'>
-                            {quantity}
-                        </div>
 
-                        <div onClick={handleAdd} className='quantity__add'>
-                            <span style={{ marginLeft: '9px' }}> +</span>
-                        </div>
-                    </div>
                     <div className='cart__body__total'>
                         <span className='cart__body__totalPrice'>Rs:{price}</span>
                         <span onClick={() => {
@@ -58,5 +33,4 @@ const CartContent = ({ id, name, price, img }) => {
         </div>
     )
 }
-
 export default CartContent

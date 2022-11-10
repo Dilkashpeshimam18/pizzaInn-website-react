@@ -26,29 +26,7 @@
   font-weight: bold;
   font-size: 15px;
 }
-.cart__body__quantity {
-  display: flex;
-  padding: 11px;
-  margin-left: 80px;
-}
-.quantity__add {
-  background-color: #ffca40;
-  height: 25px;
-  width: 30px;
-  border-radius: 10px;
-  cursor: pointer;
-  margin-left: 10px;
-}
-.quantity__subtract {
-  background-color: rgb(224, 224, 224);
-  /* background-color: #ffca40; */
 
-  height: 25px;
-  width: 30px;
-  border-radius: 10px;
-  cursor: pointer;
-  margin-right: 10px;
-}
 .cart__body__content {
   display: flex;
   flex-direction: column;

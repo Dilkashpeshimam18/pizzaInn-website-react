@@ -1,17 +1,21 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useState, useReducer } from 'react'
 import CartContext from './cartContext'
 
 
 const CartProvider = (props) => {
     const [items, setItems] = useState([])
     const [totalAmount, setTotalAmount] = useState(0)
+    const [numberOfItem, setNumberOfItem] = useState(0)
 
     const addItem = (item) => {
+
         setItems((prevItem) => {
             let updatedItems = [...prevItem]
             updatedItems.push(item)
             return updatedItems
         })
+
+
 
 
         console.log(items)
@@ -27,12 +31,16 @@ const CartProvider = (props) => {
 
     }
 
+
     const cartValue = {
         items: items,
         totalAmount: totalAmount,
         addItem: addItem,
         removeItem: removeItem,
-        removeAll: removeAll
+        removeAll: removeAll,
+        numberOfItem: numberOfItem,
+        setNumberOfItem: setNumberOfItem
+
     }
     return (
         <CartContext.Provider value={cartValue}>{props.children}</CartContext.Provider>

@@ -6,12 +6,15 @@ import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import CartContext from '../../store/cartContext';
 
 const Header = ({ setIsPane }) => {
-    const { items, addItem } = useContext(CartContext)
-    const numberOfItem = items.reduce((currNum, item) => {
+    const { items, addItem, numberOfItem, setNumberOfItem } = useContext(CartContext)
+    let cartVal;
+    const quantity = items.reduce((currNum, item) => {
         return currNum + item.quantity
+
     }, 0)
     useEffect(() => {
-        console.log(items)
+
+        setNumberOfItem(quantity)
     }, [items, addItem])
     return (
         <div className='header'>
@@ -34,7 +37,8 @@ const Header = ({ setIsPane }) => {
                 </div>
 
                 <div style={{ marginTop: '15px', cursor: 'pointer' }} className='navLink__container'>
-                    {items.length}
+                    {/* {items.length} */}
+                    {numberOfItem}
                 </div>
                 <div className='navLink__container button-cotainer'>
                     <SearchOutlinedIcon style={{ fontSize: '23px' }} />
