@@ -7,7 +7,6 @@ import CartContext from '../../store/cartContext';
 
 const Header = ({ setIsPane }) => {
     const { items, addItem, numberOfItem, setNumberOfItem } = useContext(CartContext)
-    let cartVal;
     const quantity = items.reduce((currNum, item) => {
         return currNum + item.quantity
 
@@ -37,7 +36,6 @@ const Header = ({ setIsPane }) => {
                 </div>
 
                 <div style={{ marginTop: '15px', cursor: 'pointer' }} className='navLink__container'>
-                    {/* {items.length} */}
                     {numberOfItem}
                 </div>
                 <div className='navLink__container button-cotainer'>

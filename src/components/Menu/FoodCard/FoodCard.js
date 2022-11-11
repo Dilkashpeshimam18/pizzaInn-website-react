@@ -1,10 +1,10 @@
 import React, { useContext, useEffect, useState } from 'react'
 import './FoodCard.css'
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import CartContext from '../../../store/cartContext';
 
 
-const FoodCard = ({ id, name, img, description, price, addFoodItems }) => {
+
+const FoodCard = ({ id, name, img, description, price }) => {
     const [quantity, setQuantity] = useState(1)
 
     const { items, addItem } = useContext(CartContext)
@@ -46,6 +46,7 @@ const FoodCard = ({ id, name, img, description, price, addFoodItems }) => {
 
 
     return (
+
         <div className='foodCard'>
             <div className='foodCard__img'>
                 <img className='card__img' src={img} />
