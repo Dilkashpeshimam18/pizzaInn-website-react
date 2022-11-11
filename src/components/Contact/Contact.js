@@ -1,11 +1,13 @@
 import React from 'react'
-import Header from '../Header/Header'
-import TopHeader from '../Header/TopHeader'
+import { motion } from 'framer-motion'
 const Contact = () => {
     return (
-        <div>
-
-        </div>
+        <motion.div
+            initial={{ width: 0 }}
+            animate={{ width: '100%' }}
+            exit={{ x: window.innerWidth, transition: { duration: 0.1 } }}>
+            <h1>Comming Soon!</h1>
+        </motion.div>
     )
 }
 

@@ -28,9 +28,9 @@ const Header = ({ setIsPane }) => {
                     <Link to='/menu' style={{ textDecoration: 'none' }}><p className='navLink'>MENU</p></Link>
                 </div>
 
-                <div className='navLink__container'>
+                {/* <div className='navLink__container'>
                     <Link to='/contact' style={{ textDecoration: 'none' }}><p className='navLink'>CONTACT</p></Link>
-                </div>
+                </div> */}
                 <div onClick={() => setIsPane(true)} style={{ marginTop: '15px', cursor: 'pointer' }} className='navLink__container'>
                     <ShoppingCartIcon />
                 </div>
