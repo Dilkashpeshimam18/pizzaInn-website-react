@@ -27,8 +27,12 @@ const Cart = (props) => {
     return (
         <div className='cart__container'>
             <div className='cart__header'>
-                <h3 className='cart__title'>Your Cart</h3>
-                <p onClick={removeAll} className='cart__remove'>Remove all</p>
+                {items.length == 0 ?
+                    <h3 className='cart__title'>Your Cart Is Empty</h3> :
+                    <><h3 className='cart__title'>Your Cart</h3>
+                        <p onClick={removeAll} className='cart__remove'>Remove all</p></>
+                }
+
             </div>
             <div className='cart__main'>
                 {items.map((data, index) => {
@@ -44,9 +48,12 @@ const Cart = (props) => {
                 <h2>Rs {total}</h2>
             </div>
             <div className='cart__buttons'>
-                <button onClick={closeCart} className='cart__button'>Cancel</button>
-                <button onClick={showOrder} className='cart__button'>Order</button>
-                {isOrder == true && <Order onClose={closeOrder} />}
+                {items.length != 0 && <>
+                    <button onClick={closeCart} className='cart__button'>Cancel</button>
+                    <button onClick={showOrder} className='cart__button'>Order</button>
+                    {isOrder == true && <Order onClose={closeOrder} />}
+                </>}
+
 
             </div>
         </div>
