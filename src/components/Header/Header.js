@@ -4,9 +4,25 @@ import { Link } from 'react-router-dom'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import CartContext from '../../store/cartContext';
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogTitle from '@mui/material/DialogTitle';
 
 const Header = ({ setIsPane }) => {
     const { items, addItem, numberOfItem, setNumberOfItem } = useContext(CartContext)
+    const [open, setOpen] = React.useState(false);
+
+    const handleClickOpen = () => {
+        setOpen(true);
+    };
+
+    const handleClose = () => {
+        setOpen(false);
+    };
     const quantity = items.reduce((currNum, item) => {
         return currNum + item.quantity
 
@@ -38,11 +54,32 @@ const Header = ({ setIsPane }) => {
                 <div style={{ marginTop: '15px', cursor: 'pointer' }} className='navLink__container'>
                     {numberOfItem}
                 </div>
-                <div className='navLink__container button-cotainer'>
+                <div onClick={handleClickOpen} style={{ cursor: 'pointer' }} className='navLink__container button-cotainer'>
                     <SearchOutlinedIcon style={{ fontSize: '23px' }} />
 
-                    {/* <Link to='/menu' style={{ textDecoration: 'none' }}><button className='navLink__button'>Order Now</button></Link> */}
                 </div>
+                <Dialog fullWidth='md' open={open} onClose={handleClose}>
+                    <DialogTitle >Search</DialogTitle>
+                    <DialogContent>
+
+                        <TextField
+                            autoFocus
+                            margin="dense"
+                            id="name"
+                            label="Enter food name"
+                            type="search"
+                            fullWidth
+                            variant="standard"
+                        />
+                    </DialogContent>
+                    <DialogActions>
+                        <Button
+                            onClick={handleClose}>Cancel</Button>
+                        <Button
+                            onClick={handleClose}>Search</Button>
+                    </DialogActions>
+                </Dialog>
+
             </div>
 
 
