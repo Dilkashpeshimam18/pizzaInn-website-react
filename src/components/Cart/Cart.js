@@ -18,9 +18,12 @@ const Cart = (props) => {
     }
     const closeOrder = () => {
         setIsOrder(false)
+        removeAll()
+
     }
     const closeCart = () => {
         props.setIsPane(false)
+
     }
 
 

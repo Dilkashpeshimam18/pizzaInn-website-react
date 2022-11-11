@@ -11,6 +11,8 @@ import AnimatedRoutes from './routes/AnimatedRoutes';
 
 function App() {
   const [isPane, setIsPane] = useState(false)
+  const [searchFood, setSearchFood] = useState('')
+
 
   return (
     <CartProvider>
@@ -30,8 +32,8 @@ function App() {
           <Cart setIsPane={setIsPane} />
         </SlidingPane>
         <TopHeader />
-        <Header setIsPane={setIsPane} />
-        <AnimatedRoutes />
+        <Header searchFood={searchFood} setSearchFood={setSearchFood} setIsPane={setIsPane} />
+        <AnimatedRoutes searchFood={searchFood} setSearchFood={setSearchFood} />
 
       </div>
     </CartProvider>

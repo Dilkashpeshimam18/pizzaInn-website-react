@@ -1,30 +1,39 @@
 export const Data = [
     {
         id: 1,
-        name: 'Margherita',
-        description: 'Cheese',
-        price: 180,
-        image: 'https://api.pizzahut.io/v1/content/en-in/in-1/images/pizza/margherita.90f9451fd66871fb6f9cf7d506053f18.1.jpg?width=251',
+        name: 'Pepperoni Pizza',
+        description: 'A classic American taste! Relish the delectable flavor of Chicken Pepperoni, topped with extra cheese',
+        price: 200,
+        image: 'http://www.emborg.com/Admin/Public/getImage.ashx?Image=/Files/Images/Emborg/1600x450/1600x450_Thin-crust_pepperoni_pizza.jpg&width=640&height=300&crop=0',
         quantity: 1
+
     },
     {
         id: 2,
+        name: 'Margherita',
+        description: 'Cheese',
+        price: 180,
+        image: 'https://static.toiimg.com/thumb/56868564.cms?imgsize=1948751&width=800&height=800',
+        quantity: 1
+    },
+    {
+        id: 3,
         name: 'Tandoori Paneer',
         description: 'Spiced paneer, Onion, Green Capsicum & Red Paprika in Tandoori Sauce',
         price: 200,
-        image: 'https://carameltintedlife.com/wp-content/uploads/2021/09/paneer-pizza-recipe-1-2.jpg',
-        quantity: 1
-
-    }, {
-        id: 3,
-        name: 'Veggie Supreme',
-        description: 'Black Olives, Green Capsicum, Mushroom, Onion, Red Paprika, Sweet Corn',
-        price: 210,
-        image: 'https://i0.wp.com/www.thursdaynightpizza.com/wp-content/uploads/2022/06/veggie-pizza-overhead-sliced.png?resize=768%2C960&ssl=1',
+        image: 'https://indiaphile.info/wp-content/uploads/2012/10/tandooripizza-2349-740x493.jpg',
         quantity: 1
 
     }, {
         id: 4,
+        name: 'Veggie Supreme',
+        description: 'Black Olives, Green Capsicum, Mushroom, Onion, Red Paprika, Sweet Corn',
+        price: 210,
+        image: 'https://i0.wp.com/www.thursdaynightpizza.com/wp-content/uploads/2022/06/veggie-pizza-side-view-out-of-oven.png?resize=720%2C480&ssl=1',
+        quantity: 1
+
+    }, {
+        id: 5,
         name: 'Chicken Supreme',
         description: 'Herbed Chicken, Schezwan Chicken Meatball, Chicken Tikka',
         price: 230,
@@ -33,7 +42,7 @@ export const Data = [
 
     },
     {
-        id: 5,
+        id: 6,
         name: 'Triple Chicken Feast',
         description: 'Schezwan Chicken Meatball, Herbed Chicken, Chicken Sausage, Green Capsicum, Onion, Red Paprika',
         price: 270,
@@ -42,7 +51,7 @@ export const Data = [
 
     },
     {
-        id: 6,
+        id: 7,
         name: 'Veg Kabab Supreme',
         description: 'Veg Kebab, Onion, Green Capsicum, Tomato & Sweet Corn in Tandoori Sauce',
         price: 240,
@@ -50,7 +59,7 @@ export const Data = [
         quantity: 1
 
     }, {
-        id: 7,
+        id: 8,
         name: 'Chicken Tikka',
         description: 'Chicken Tikka, Onion, Tomato',
         price: 250,
@@ -58,7 +67,7 @@ export const Data = [
         quantity: 1
 
     }, {
-        id: 8,
+        id: 9,
         name: 'Double Chicken Sausage',
         description: 'Chicken Sausage',
         price: 260,
@@ -66,7 +75,7 @@ export const Data = [
         quantity: 1
 
     }, {
-        id: 9,
+        id: 10,
         name: 'Tandoori Mushroom',
         description: 'Pizza topped with our signature tandoori sauce, juicy mushroom.',
         price: 260,

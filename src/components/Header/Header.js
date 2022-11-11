@@ -9,12 +9,12 @@ import TextField from '@mui/material/TextField';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 
-const Header = ({ setIsPane }) => {
+const Header = ({ setIsPane, searchFood, setSearchFood }) => {
     const { items, addItem, numberOfItem, setNumberOfItem } = useContext(CartContext)
     const [open, setOpen] = React.useState(false);
+
 
     const handleClickOpen = () => {
         setOpen(true);
@@ -23,6 +23,10 @@ const Header = ({ setIsPane }) => {
     const handleClose = () => {
         setOpen(false);
     };
+
+    const handleSearch = () => {
+
+    }
     const quantity = items.reduce((currNum, item) => {
         return currNum + item.quantity
 
@@ -30,6 +34,7 @@ const Header = ({ setIsPane }) => {
     useEffect(() => {
 
         setNumberOfItem(quantity)
+
     }, [items, addItem])
     return (
         <div className='header'>
@@ -68,15 +73,17 @@ const Header = ({ setIsPane }) => {
                             id="name"
                             label="Enter food name"
                             type="search"
-                            fullWidth
+                            fullWidth={true}
                             variant="standard"
+                            value={searchFood}
+                            onChange={(e) => setSearchFood(e.target.value)}
                         />
                     </DialogContent>
                     <DialogActions>
                         <Button
                             onClick={handleClose}>Cancel</Button>
                         <Button
-                            onClick={handleClose}>Search</Button>
+                            onClick={handleSearch}>Search</Button>
                     </DialogActions>
                 </Dialog>
 

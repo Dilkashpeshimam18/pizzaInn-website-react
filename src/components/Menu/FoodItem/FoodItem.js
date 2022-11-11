@@ -4,7 +4,7 @@ import FoodCard from '../FoodCard/FoodCard'
 import { Data } from '../FoodData/FoodData'
 
 
-const FoodItem = ({ itemQuantity, setItemQuantity }) => {
+const FoodItem = ({ itemQuantity, setItemQuantity, searchFood, setSearchFood }) => {
     const [foodData, setFoodData] = useState([])
     useEffect(() => {
         let data = Data
