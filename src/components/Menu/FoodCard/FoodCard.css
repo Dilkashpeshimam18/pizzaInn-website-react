@@ -42,9 +42,9 @@
   font-weight: 600;
 }
 .card__button:hover {
-  background-color: white;
-  border: 1px solid #ffca40;
-  color: #ffca40;
+  background-color: #ed4e53;
+  border: 1px solid #ed4e53;
+  color: white;
 }
 .foorCart__button {
   padding: 3px;

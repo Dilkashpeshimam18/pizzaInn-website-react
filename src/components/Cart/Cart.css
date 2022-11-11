@@ -8,7 +8,7 @@
   width: 250px;
   height: 40px;
   background-color: #fccc4c;
-  color: black;
+  color: white;
   border: none;
   padding: 5px;
   margin: 5px;
@@ -35,9 +35,9 @@
   color: white;
 }
 .cart__button:hover {
-  background-color: white;
-  color: #ffca40;
-  border: 1px solid #ffca40;
+  background-color: #ed4e53;
+  color: white;
+  border: 1px solid #ed4e53;
 }
 .cart__total__title {
   padding-top: 5px;
