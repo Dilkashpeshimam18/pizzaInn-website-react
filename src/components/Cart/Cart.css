@@ -45,4 +45,7 @@
 .cart__main {
   height: max-content;
   margin-bottom: 10px;
+  overflow-y: auto;
+  max-height: 560px;
+  /* height: 550px; */
 }

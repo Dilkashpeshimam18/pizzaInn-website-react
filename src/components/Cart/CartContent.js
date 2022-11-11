@@ -4,7 +4,7 @@ import Divider from '@mui/material/Divider';
 import CartContext from '../../store/cartContext';
 
 
-const CartContent = ({ id, name, price, img, incrementQuantity }) => {
+const CartContent = ({ id, name, price, img, quantity }) => {
     const { removeItem } = useContext(CartContext)
 
     return (
@@ -16,6 +16,11 @@ const CartContent = ({ id, name, price, img, incrementQuantity }) => {
                         <span className='card__body__name'>{name}</span>
                         <span>Rs:{price}</span>
 
+                    </div>
+
+                    <div className='cart__quantityContainer'>
+                        <span className='cart__body__quantityTitle' >Quantity</span>
+                        <span className='cart__body__quantityTotal'>{quantity}</span>
                     </div>
 
                     <div className='cart__body__total'>

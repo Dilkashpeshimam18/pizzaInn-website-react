@@ -25,6 +25,7 @@
 .card__body__name {
   font-weight: bold;
   font-size: 15px;
+  width: 100px;
 }
 
 .cart__body__content {
@@ -55,4 +56,16 @@
 .cart__body__sub {
   display: flex;
   margin-bottom: 18px;
+}
+.cart__quantityContainer {
+  width: 80px;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  margin-left: 78px;
+}
+.cart__body__quantityTitle {
+  font-weight: bold;
+  font-size: 15px;
 }
