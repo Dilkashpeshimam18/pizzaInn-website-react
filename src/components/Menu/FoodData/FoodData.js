@@ -71,15 +71,15 @@ export const Data = [
         name: 'Double Chicken Sausage',
         description: 'Chicken Sausage',
         price: 260,
-        image: 'https://www.dominos.co.in/files/items/spiced_doubled.jpg',
+        image: 'https://theorangecuisinehome.files.wordpress.com/2019/05/9j925zalp4o01.jpg',
         quantity: 1
 
     }, {
         id: 10,
         name: 'Tandoori Mushroom',
-        description: 'Pizza topped with our signature tandoori sauce, juicy mushroom.',
+        description: 'Pizza topped with our signature tandoori sauce, juicy mushroom and sweet corn.',
         price: 260,
-        image: 'https://sinfullyspicy.com/wp-content/uploads/2022/02/Tandoori-Mushroom-Pizza.jpg',
+        image: 'https://www.jopreetskitchen.com/wp-content/uploads/2012/11/DSC_8595.jpg',
         quantity: 1
 
     },

@@ -1,11 +1,20 @@
-import React, { useContext, useState, useReducer } from 'react'
+import React, { useState, useEffect } from 'react'
 import CartContext from './cartContext'
 
 
 const CartProvider = (props) => {
-    const [items, setItems] = useState([])
+
+    const [items, setItems] = useState(() => {
+        return JSON.parse(localStorage.getItem('allItems')) || []
+    })
     const [totalAmount, setTotalAmount] = useState(0)
     const [numberOfItem, setNumberOfItem] = useState(0)
+
+
+    useEffect(() => {
+        localStorage.setItem('allItems', JSON.stringify(items))
+
+    }, [items])
 
     const addItem = (item) => {
         let existingItemIndex = items.findIndex(ele => ele.id === item.id)
