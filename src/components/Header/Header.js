@@ -4,25 +4,21 @@ import { Link } from 'react-router-dom'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import CartContext from '../../store/cartContext';
-import Button from '@mui/material/Button';
-import TextField from '@mui/material/TextField';
-import Dialog from '@mui/material/Dialog';
-import DialogActions from '@mui/material/DialogActions';
-import DialogContent from '@mui/material/DialogContent';
-import DialogTitle from '@mui/material/DialogTitle';
+import SearchBox from '../SearchBox/SearchBox';
+
 
 const Header = ({ setIsPane, searchFood, setSearchFood }) => {
     const { items, addItem, numberOfItem, setNumberOfItem } = useContext(CartContext)
-    const [open, setOpen] = React.useState(false);
-    const [totalCart, setTotalCart] = useState(0)
+    const [totalCart, setTotalCart] = useState(0);
+    const [showSearch, setShowSearch] = useState(false)
 
 
     const handleClickOpen = () => {
-        setOpen(true);
+        setShowSearch(true);
     };
 
     const handleClose = () => {
-        setOpen(false);
+        setShowSearch(false);
     };
 
 
@@ -35,7 +31,6 @@ const Header = ({ setIsPane, searchFood, setSearchFood }) => {
 
         setNumberOfItem(quantity)
         localStorage.setItem('totalCart', numberOfItem)
-        // console.log(totalCart)
         let value = localStorage.getItem('totalCart')
         setTotalCart(value)
 
@@ -68,30 +63,7 @@ const Header = ({ setIsPane, searchFood, setSearchFood }) => {
                     <SearchOutlinedIcon style={{ fontSize: '23px' }} />
 
                 </div>
-                <Dialog fullWidth='md' open={open} onClose={handleClose}>
-                    <DialogTitle >Search</DialogTitle>
-                    <DialogContent>
-
-                        <TextField
-                            autoFocus
-                            margin="dense"
-                            id="name"
-                            label="Enter food name"
-                            type="search"
-                            fullWidth={true}
-                            variant="standard"
-                            value={searchFood}
-                            onChange={(e) => setSearchFood(e.target.value)}
-                        />
-                    </DialogContent>
-                    <DialogActions>
-                        <Button
-                            onClick={handleClose}>Cancel</Button>
-                        <Button
-                        >Search</Button>
-                    </DialogActions>
-                </Dialog>
-
+                {showSearch && <SearchBox showSearch={showSearch} handleClose={handleClose} />}
             </div>
 
 

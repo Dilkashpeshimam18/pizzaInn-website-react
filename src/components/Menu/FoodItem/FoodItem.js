@@ -1,16 +1,21 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import './FoodItem.css'
 import FoodCard from '../FoodCard/FoodCard'
 import { Data } from '../FoodData/FoodData'
+import CartContext from '../../../store/cartContext'
 
 
 const FoodItem = ({ itemQuantity, setItemQuantity, searchFood, setSearchFood }) => {
-    const [foodData, setFoodData] = useState([])
+    const { foodData, setFoodData, isFilter } = useContext(CartContext)
     useEffect(() => {
-        let data = Data
-        setFoodData(data)
+        if (isFilter != true) {
+            let data = Data
+            setFoodData(data)
+        }
 
-    }, [Data])
+
+
+    }, [Data, isFilter])
 
 
     return (

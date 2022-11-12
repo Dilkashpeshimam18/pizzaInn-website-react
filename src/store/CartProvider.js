@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react'
+import { Data } from '../components/Menu/FoodData/FoodData'
 import CartContext from './cartContext'
+import { useLocation, useNavigate } from 'react-router-dom'
+
 
 
 const CartProvider = (props) => {
@@ -7,9 +10,13 @@ const CartProvider = (props) => {
     const [items, setItems] = useState(() => {
         return JSON.parse(localStorage.getItem('allItems')) || []
     })
+    const [foodData, setFoodData] = useState([])
     const [totalAmount, setTotalAmount] = useState(0)
     const [numberOfItem, setNumberOfItem] = useState(0)
-
+    const [searchFood, setSearchFood] = useState('')
+    const [isFilter, setIsFilter] = useState(false)
+    const location = useLocation()
+    const navigate = useNavigate()
 
     useEffect(() => {
         localStorage.setItem('allItems', JSON.stringify(items))
@@ -33,7 +40,6 @@ const CartProvider = (props) => {
                 updatedItems[existingItemIndex] = updatedItem
                 return updatedItems
             })
-            console.log('updated item')
 
         } else {
             setItems((prevItem) => {
@@ -41,7 +47,6 @@ const CartProvider = (props) => {
                 updatedItems.push(item)
                 return updatedItems
             })
-            console.log('added new item')
         }
     }
     const removeAll = () => {
@@ -115,6 +120,23 @@ const CartProvider = (props) => {
 
     }
 
+    const searchFoodItem = (currLocation) => {
+        if (currLocation == '/') {
+            setIsFilter(true)
+            navigate('/menu')
+            const filterItem = foodData.filter((data) => {
+                return data.name.toLowerCase().includes(searchFood.toLowerCase())
+            })
+            setFoodData(filterItem)
+        } else {
+            const filterItem = foodData.filter((data) => {
+                return data.name.toLowerCase().includes(searchFood.toLowerCase())
+            })
+            setFoodData(filterItem)
+        }
+
+
+    }
     const cartValue = {
         items: items,
         totalAmount: totalAmount,
@@ -124,7 +146,14 @@ const CartProvider = (props) => {
         numberOfItem: numberOfItem,
         setNumberOfItem: setNumberOfItem,
         incrementQuantity: incrementQuantity,
-        decrementQuantity: decrementQuantity
+        decrementQuantity: decrementQuantity,
+        searchFood: searchFood,
+        setSearchFood: setSearchFood,
+        searchFoodItem: searchFoodItem,
+        foodData: foodData,
+        setFoodData: setFoodData,
+        isFilter: isFilter,
+        setIsFilter: setIsFilter
 
     }
     return (
