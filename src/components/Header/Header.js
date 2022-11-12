@@ -14,6 +14,7 @@ import DialogTitle from '@mui/material/DialogTitle';
 const Header = ({ setIsPane, searchFood, setSearchFood }) => {
     const { items, addItem, numberOfItem, setNumberOfItem } = useContext(CartContext)
     const [open, setOpen] = React.useState(false);
+    const [totalCart, setTotalCart] = useState(0)
 
 
     const handleClickOpen = () => {
@@ -24,16 +25,20 @@ const Header = ({ setIsPane, searchFood, setSearchFood }) => {
         setOpen(false);
     };
 
-    const handleSearch = () => {
 
-    }
     const quantity = items.reduce((currNum, item) => {
         return currNum + item.quantity
 
     }, 0)
+    localStorage.setItem('quantity', quantity)
     useEffect(() => {
 
         setNumberOfItem(quantity)
+        localStorage.setItem('totalCart', numberOfItem)
+        // console.log(totalCart)
+        let value = localStorage.getItem('totalCart')
+        setTotalCart(value)
+
 
     }, [items, addItem])
     return (
@@ -57,7 +62,7 @@ const Header = ({ setIsPane, searchFood, setSearchFood }) => {
                 </div>
 
                 <div style={{ marginTop: '15px', cursor: 'pointer' }} className='navLink__container'>
-                    {numberOfItem}
+                    {totalCart}
                 </div>
                 <div onClick={handleClickOpen} style={{ cursor: 'pointer' }} className='navLink__container button-cotainer'>
                     <SearchOutlinedIcon style={{ fontSize: '23px' }} />
@@ -83,7 +88,7 @@ const Header = ({ setIsPane, searchFood, setSearchFood }) => {
                         <Button
                             onClick={handleClose}>Cancel</Button>
                         <Button
-                            onClick={handleSearch}>Search</Button>
+                        >Search</Button>
                     </DialogActions>
                 </Dialog>
 

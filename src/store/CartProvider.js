@@ -34,12 +34,6 @@ const CartProvider = (props) => {
             })
             console.log('added new item')
         }
-
-
-
-
-
-        console.log(items)
     }
     const removeAll = () => {
         setItems([])
@@ -52,6 +46,65 @@ const CartProvider = (props) => {
 
     }
 
+    const incrementQuantity = (id) => {
+        let existingItemIndex = items.findIndex(ele => ele.id === id)
+        let existingItem = items[existingItemIndex]
+        let updatedItem;
+        let updatedItems
+        let currQuantity = existingItem.quantity
+
+        if (existingItem) {
+
+            if (currQuantity <= 4) {
+                updatedItem = {
+                    ...existingItem,
+                    quantity: existingItem.quantity + 1
+                }
+            } else {
+                updatedItem = {
+                    ...existingItem,
+                    quantity: existingItem.quantity
+                }
+            }
+
+            setItems((prevItem) => {
+                updatedItems = [...prevItem]
+                updatedItems[existingItemIndex] = updatedItem
+                return updatedItems
+            })
+
+        }
+
+    }
+    const decrementQuantity = (id) => {
+        let existingItemIndex = items.findIndex(ele => ele.id === id)
+        let existingItem = items[existingItemIndex]
+        let updatedItem;
+        let updatedItems
+        let currQuantity = existingItem.quantity
+        if (existingItem) {
+            if (currQuantity <= 1) {
+                updatedItem = {
+                    ...existingItem,
+                    quantity: 1
+                }
+            } else {
+                updatedItem = {
+                    ...existingItem,
+                    quantity: existingItem.quantity - 1
+                }
+            }
+
+            setItems((prevItem) => {
+                updatedItems = [...prevItem]
+                updatedItems[existingItemIndex] = updatedItem
+                return updatedItems
+            })
+
+        }
+
+
+    }
 
     const cartValue = {
         items: items,
@@ -60,7 +113,9 @@ const CartProvider = (props) => {
         removeItem: removeItem,
         removeAll: removeAll,
         numberOfItem: numberOfItem,
-        setNumberOfItem: setNumberOfItem
+        setNumberOfItem: setNumberOfItem,
+        incrementQuantity: incrementQuantity,
+        decrementQuantity: decrementQuantity
 
     }
     return (

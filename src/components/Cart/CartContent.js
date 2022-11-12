@@ -5,7 +5,7 @@ import CartContext from '../../store/cartContext';
 
 
 const CartContent = ({ id, name, price, img, quantity }) => {
-    const { removeItem } = useContext(CartContext)
+    const { removeItem, incrementQuantity, decrementQuantity } = useContext(CartContext)
 
     return (
         <div className='cart'>
@@ -20,7 +20,19 @@ const CartContent = ({ id, name, price, img, quantity }) => {
 
                     <div className='cart__quantityContainer'>
                         <span className='cart__body__quantityTitle' >Quantity</span>
-                        <span className='cart__body__quantityTotal'>{quantity}</span>
+                        {/* <span className='cart__body__quantityTotal'>{quantity}</span> */}
+                        <div className='cart__body__quantity'>
+                            <div onClick={() => decrementQuantity(id)} className='quantity__subtract'>
+                                <span style={{ marginLeft: '12px' }}>-</span>
+                            </div>
+                            <div className='quantity'>
+                                {quantity}
+                            </div>
+
+                            <div onClick={() => incrementQuantity(id)} className='quantity__add'>
+                                <span style={{ marginLeft: '9px' }}> +</span>
+                            </div>
+                        </div>
                     </div>
 
                     <div className='cart__body__total'>

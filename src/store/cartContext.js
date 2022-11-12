@@ -8,6 +8,8 @@ const CartContext = createContext({
     removeItem: (items) => { },
     removeAll: () => { },
     numberOfItem: 0,
+    incrementQuantity: (id) => { },
+    decrementQuantity: (id) => { }
 
 })
 

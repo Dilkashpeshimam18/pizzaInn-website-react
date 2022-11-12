@@ -10,7 +10,7 @@ const FoodCard = ({ id, name, img, description, price }) => {
     const { items, addItem } = useContext(CartContext)
 
 
-    let cart;
+
     const handleAdd = (id) => {
         if (id == id && quantity <= 4) {
             setQuantity((prev) => prev + 1)
@@ -25,9 +25,6 @@ const FoodCard = ({ id, name, img, description, price }) => {
         }
 
     }
-
-
-
 
 
     const handleSubtract = () => {
