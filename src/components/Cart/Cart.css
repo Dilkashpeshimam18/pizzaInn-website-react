@@ -46,6 +46,16 @@
   height: max-content;
   margin-bottom: 10px;
   overflow-y: auto;
+  overflow-x: hidden;
   max-height: 560px;
   /* height: 550px; */
+}
+.cart__main::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.cart__main {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
