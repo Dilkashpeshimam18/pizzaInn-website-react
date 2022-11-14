@@ -7,7 +7,7 @@ import CartContext from '../../store/cartContext';
 import SearchBox from '../SearchBox/SearchBox';
 
 
-const Header = ({ setIsPane, searchFood, setSearchFood }) => {
+const Header = ({ setIsPane }) => {
     const { items, addItem, numberOfItem, setNumberOfItem } = useContext(CartContext)
     const [totalCart, setTotalCart] = useState(0);
     const [showSearch, setShowSearch] = useState(false)

@@ -6,13 +6,13 @@ import Contact from '../components/Contact/Contact'
 import { AnimatePresence } from 'framer-motion'
 
 
-const AnimatedRoutes = ({ searchFood, setSearchFood }) => {
+const AnimatedRoutes = () => {
     const location = useLocation()
     return (
         <AnimatePresence>
             <Routes location={location} key={location.pathname}>
                 <Route path='/' element={<Home />} />
-                <Route path='/menu' element={<Menu searchFood={searchFood} setSearchFood={setSearchFood} />} />
+                <Route path='/menu' element={<Menu />} />
                 {/* <Route path='/contact' element={<Contact />} /> */}
             </Routes>
         </AnimatePresence>

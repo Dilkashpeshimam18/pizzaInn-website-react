@@ -5,7 +5,7 @@ import { Data } from '../FoodData/FoodData'
 import CartContext from '../../../store/cartContext'
 
 
-const FoodItem = ({ itemQuantity, setItemQuantity, searchFood, setSearchFood }) => {
+const FoodItem = ({ itemQuantity, setItemQuantity }) => {
     const { foodData, setFoodData, isFilter } = useContext(CartContext)
     useEffect(() => {
         if (isFilter != true) {
