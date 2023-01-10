@@ -93,3 +93,17 @@
     width: 270px;
   }
 }
+@media only screen and (max-width: 350px) and (min-width: 100px) {
+  .foodCard {
+    width: 230px;
+  }
+  .card__img {
+    width: 230px;
+  }
+  .foodCard__desc {
+    font-size: 10px;
+  }
+  .card__button {
+    width: 180px;
+  }
+}
