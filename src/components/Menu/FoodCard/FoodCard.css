@@ -78,3 +78,18 @@
   cursor: pointer;
   margin-right: 10px;
 }
+
+@media only screen and (max-width: 600px) {
+  .foodCard {
+    width: 320px;
+  }
+  .card__img {
+    width: 320px;
+  }
+  .foodCard__desc {
+    font-size: 12px;
+  }
+  .card__button {
+    width: 270px;
+  }
+}

@@ -14,7 +14,7 @@ const CartContent = ({ id, name, price, img, quantity }) => {
                     <img className='cart__body__img' src={img} />
                     <div className='cart__body__content'>
                         <span className='card__body__name'>{name}</span>
-                        <span>Rs:{price}</span>
+                        <span className='card__body__price'>Rs:{price}</span>
 
                     </div>
 

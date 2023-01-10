@@ -92,3 +92,46 @@
   max-width: 100%;
   height: auto;
 }
+
+@media only screen and (max-width: 600px) {
+  .hero__subContainer2 {
+    display: none;
+  }
+  .hero__Title {
+    font-size: 55px;
+    margin-left: 40px;
+  }
+  .hero__Title2 {
+    font-size: 25px;
+    margin-left: 40px;
+  }
+  .hero__subTitle {
+    font-size: 15px;
+    margin-left: 40px;
+  }
+
+  .hero__buttonContainer {
+    margin-left: 40px;
+  }
+  .hero__iconWrapper {
+    margin-left: 25px;
+  }
+}
+@media only screen and (max-width: 1300px) and (min-width: 1000px) {
+  .hero__subContainer1 {
+    margin-left: 30px;
+  }
+  .hero__img {
+    width: 500px;
+    height: 600px;
+  }
+}
+@media only screen and (max-width: 1000px) and (min-width: 600px) {
+  .hero__img {
+    max-width: 300px;
+    height: 400px;
+  }
+  .hero__subContainer1 {
+    margin-left: 20px;
+  }
+}

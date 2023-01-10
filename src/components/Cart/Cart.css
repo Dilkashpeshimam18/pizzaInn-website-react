@@ -59,3 +59,31 @@
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+.cart__total {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .cart__header {
+    width: 320px;
+  }
+  .cart__remove {
+    font-size: 13px;
+  }
+  .cart__main {
+    width: 350px;
+  }
+  .cart__total {
+    justify-content: flex-start;
+  }
+  .cart__total > h2 {
+    margin-left: 210px;
+  }
+  .cart__buttons {
+  }
+  .cart__button {
+    width: 150px;
+  }
+}

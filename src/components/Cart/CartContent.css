@@ -70,3 +70,34 @@
   font-weight: bold;
   font-size: 15px;
 }
+@media only screen and (max-width: 600px) {
+  .cart {
+    width: 350px;
+  }
+  .cart__body {
+    width: 350px;
+  }
+  .cart__body__sub {
+    width: 350px;
+  }
+  .cart__quantityContainer {
+    width: 40px;
+    margin-left: 5px;
+  }
+  .card__body__name {
+    font-size: 14px;
+  }
+  .card__body__price {
+    font-size: 11px;
+  }
+  .cart__body__img {
+    width: 60px;
+    height: 60px;
+  }
+  .cart__body__quantityTitle {
+    font-size: 13px;
+  }
+  .cart__body__total {
+    margin-left: 35px;
+  }
+}

@@ -46,10 +46,13 @@ const Cart = (props) => {
                 })}
             </div>
 
-            <div className='cart__total'>
-                <h3 className='cart__total__title'>Total</h3>
-                <h2>Rs {total}</h2>
-            </div>
+            {items.length != 0 &&
+                <div className='cart__total'>
+                    <h3 className='cart__total__title'>Total</h3>
+                    <h2>Rs {total}</h2>
+                </div>
+            }
+
             <div className='cart__buttons'>
                 {items.length != 0 && <>
                     <button onClick={closeCart} className='cart__button'>Cancel</button>

@@ -15,6 +15,10 @@ function App() {
 
   return (
     <CartProvider>
+      <TopHeader />
+
+      <Header setIsPane={setIsPane} />
+
       <div className="app">
         <SlidingPane
           className="some-custom-class"
@@ -30,8 +34,6 @@ function App() {
         >
           <Cart setIsPane={setIsPane} />
         </SlidingPane>
-        <TopHeader />
-        <Header setIsPane={setIsPane} />
         <AnimatedRoutes />
 
       </div>
