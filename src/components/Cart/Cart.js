@@ -4,7 +4,7 @@ import CartContent from './CartContent'
 import { Link } from 'react-router-dom'
 import Order from '../Order/Order'
 import CartContext from '../../store/cartContext'
-
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 const Cart = (props) => {
     const [isOrder, setIsOrder] = useState(false)
@@ -31,11 +31,16 @@ const Cart = (props) => {
         <div className='cart__container'>
             <div className='cart__header'>
                 {items.length == 0 ?
-                    <>
-                        <h3 className='cart__title'>Your Cart Is Empty</h3>
-                        <button onClick={closeCart} className='cart__button'>Cancel</button>
+                    <div style={{ display: 'flex', flexDirection: 'row' }}>
+                        <div style={{ paddingTop: "20px", marginRight: '10px', cursor: 'pointer' }}>
+                            <ArrowBackIcon onClick={closeCart} />
 
-                    </>
+                        </div>
+
+                        <h3 className='cart__title'> Your Cart Is Empty</h3>
+
+
+                    </div>
                     :
                     <><h3 className='cart__title'>Your Cart</h3>
                         <p onClick={removeAll} className='cart__remove'>Remove all</p></>
