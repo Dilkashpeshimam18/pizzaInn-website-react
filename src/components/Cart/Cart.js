@@ -31,7 +31,12 @@ const Cart = (props) => {
         <div className='cart__container'>
             <div className='cart__header'>
                 {items.length == 0 ?
-                    <h3 className='cart__title'>Your Cart Is Empty</h3> :
+                    <>
+                        <h3 className='cart__title'>Your Cart Is Empty</h3>
+                        <button onClick={closeCart} className='cart__button'>Cancel</button>
+
+                    </>
+                    :
                     <><h3 className='cart__title'>Your Cart</h3>
                         <p onClick={removeAll} className='cart__remove'>Remove all</p></>
                 }

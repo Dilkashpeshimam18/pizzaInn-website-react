@@ -3,6 +3,7 @@ import './Hero.css'
 import Calories from '../resources/calories.png'
 import Cheese from '../resources/cheese.png'
 import { Link } from 'react-router-dom'
+
 const Hero = () => {
     return (
         <div className='hero'>
